@@ -316,7 +316,20 @@ header ul li:last-of-type a {
   right: 0;
   margin: auto;
   border: 1px solid #000000;
-  padding: 7px 7px 6px 7px;
+  padding: 8px 8px 7px 8px;
+  font-weight: 600;
+  color: #000000;
+  background: white;
+  background-image: linear-gradient(to top, black 0%, black 100%);
+  background-position: center top;
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, color 0.3s ease-in;
+}
+
+header ul li:last-of-type a:hover {
+  color: #ffffff;
+  background-size: 100% 100%;
 }
 
 @media all and (max-width: 768px) {
@@ -747,12 +760,24 @@ footer p {
   color: #000000;
 }
 
-#favorites-page #add-new-favorite form *:focus {
+#favorites-page #add-new-favorite form input[type=text]:focus {
   background: #ffffff;
 }
 
 #favorites-page #add-new-favorite form button {
   padding-right: 13px;
+  font-weight: 600;
+  background-image: linear-gradient(to top, black 0%, black 100%);
+  background-position: center top;
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, color 0.3s ease-in;
+  cursor: pointer;
+}
+
+#favorites-page #add-new-favorite form button:hover {
+  color: #ffffff;
+  background-size: 100% 100%;
 }
 
 #favorites-page h2 {

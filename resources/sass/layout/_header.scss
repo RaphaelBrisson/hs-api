@@ -12,6 +12,7 @@ header
 	{
 		display: flex;
 
+		//logo
 		li:first-of-type
 		{
 			margin: auto;
@@ -28,6 +29,8 @@ header
 				}
 			}
 		}
+
+		//btn favorites
 		li:last-of-type
 		{
 			margin: auto;
@@ -37,9 +40,22 @@ header
 			    position: absolute;
 			    right: 0;
 			    margin: auto;
-
 			    border: 1px solid $black;
-    			padding: 7px 7px 6px 7px;
+    			padding: 8px 8px 7px 8px;
+    			font-weight: 600;
+    			color: $black;
+    			background: white;
+				background-image: linear-gradient(to top, black 0%, black 100%);;
+				background-position: center top; 
+				background-size: 100% 0%;
+				background-repeat:no-repeat;
+				transition: background-size .3s, color .3s ease-in;
+
+				&:hover
+				{
+					color: $white;
+					background-size: 100% 100%;
+				}
 			}
 		}
 	}

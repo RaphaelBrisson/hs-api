@@ -62,6 +62,13 @@
                         <div class="dn-tablet">
                             <p>{{$release_date[$key]}}</p>
                         </div>
+                        <form action="{{route('favorites-insert')}}" method="post">
+                            <!-- @csrf pour protéger des attaques -->
+                            @csrf
+                            <input type="hidden" name="artists" value="{{$azerty[$key]}}">
+                            <input type="hidden" name="track_name" value="{{$track_title[$key]}}">
+                            <button>Add to favorites</button>
+                        </form>
                     </div>
                 @endforeach
 
@@ -70,7 +77,7 @@
 
         @include('common-sections/footer')
 
-        <!-- <script src="/js/app.js"></script> -->
+        <script src="/js/app.js"></script>
         
     </body>
 </html>

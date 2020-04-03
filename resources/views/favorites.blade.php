@@ -19,7 +19,7 @@
         <section id="add-new-favorite">
             <h2>Add a music to your favorites</h2>
             <form action="{{route('favorites-insert')}}" method="post">
-                <!-- @csrf pour protéger des attaques -->
+                <!-- csrf pour protéger des attaques -->
                 @csrf
                 <input type="text" name="artists" placeholder="Artist(s)">
                 <input type="text" name="track_name" placeholder="Track Name">

@@ -56,6 +56,7 @@ class Top40Controller extends Controller
 			$artwork = array();
 			$artists_table = array();
 			$artists_id_table = array();
+			$azerty = array();
 
 			// Pour chaque track
 			foreach ($playlist_tracks as $key => $playlist_track) {
@@ -114,10 +115,19 @@ class Top40Controller extends Controller
 					}
 					array_push($artists_table, $artists);
 					array_push($artists_id_table, $artists_id);
+
+					// Pour pouvoir ajouter tous les artistes dans l'input hidden dédié aux artistes (afin d'ajouter une track à ses favoris)
+					array_push($azerty, implode(" - ", $artists_table[$key]));
+
+
 				}
 			}
-			//dd($artists_id_table);
+			//dd($artists_table);
+
+			//$azerty = implode(" - ", $artists_table[$key]);
+			//dd($azerty);	
 		}
-		return view('welcome', compact("playlist_title", "playlist_tracks", "track_data", "track_title", "release_date", "artwork", "artists_table", "artists_id_table"));
+
+		return view('welcome', compact("playlist_title", "playlist_tracks", "track_data", "track_title", "release_date", "artwork", "artists_table", "artists_id_table", "azerty"));
     }
 }
