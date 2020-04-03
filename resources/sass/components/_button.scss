@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+
+.see-more
+{
+	display: flex;
+
+	button
+	{
+		border: none;
+		background: none;
+		padding: 0;
+		font-weight: 900;
+		font-size: 22px;
+		outline: none;
+		cursor: pointer;
+		margin: auto;
+	}
+}

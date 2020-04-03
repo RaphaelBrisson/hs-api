@@ -1,0 +1,101 @@
+.artist-releases-container
+{
+	div
+	{
+		// artwork
+		div:nth-child(1) 
+		{
+			width: 10%;
+		}
+		// artist(s)
+		div:nth-child(2) 
+		{
+			width: 45%;
+			flex-flow: wrap;
+
+			// enlèves le " -" sur le dernier artiste
+			&>p:last-of-type
+			{
+				display: none;
+			}
+		}
+		// track name
+		div:nth-child(3) 
+		{
+			width: 45%;
+		}
+	}
+}
+
+#artist-releases
+{
+	h2
+	{
+		margin-bottom: 50px;
+	}
+}
+
+
+@media all and (max-width: 768px)
+{
+	.artist-releases-container
+	{
+		div
+		{
+			// artwork
+			div:nth-child(1) 
+			{
+				width: 20%;
+			}
+			// artist(s)
+			div:nth-child(2) 
+			{
+				width: 40%;
+				flex-flow: wrap;
+
+				// enlèves le " -" sur le dernier artiste
+				&>p:last-of-type
+				{
+					display: none;
+				}
+			}
+			// track name
+			div:nth-child(3) 
+			{
+				width: 40%;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 480px)
+{
+	.artist-releases-container
+	{
+		div
+		{
+			// artwork
+			div:nth-child(1) 
+			{
+				width: 0%;
+			}
+			// artist(s)
+			div:nth-child(2) 
+			{
+				width: 50%;
+				flex-flow: wrap;
+
+				// enlèves le " -" sur le dernier artiste
+				&>p:last-of-type
+				{
+					display: none;
+				}
+			}
+			// track name
+			div:nth-child(3) 
+			{
+				width: 50%;
+			}
+		}
+	}
+}

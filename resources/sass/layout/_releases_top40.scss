@@ -1,0 +1,191 @@
+.top-40-container
+{
+	div
+	{
+		// position
+		div:nth-child(1) 
+		{
+			width: 5%;
+		}
+		// artwork
+		div:nth-child(2) 
+		{
+			width: 10%;
+		}
+		// artist(s)
+		div:nth-child(3) 
+		{
+			width: 37%;
+			flex-flow: wrap;
+			
+			// enlèves le " -" sur le dernier artiste
+			&>p:last-of-type
+			{
+				display: none;
+			}
+		}
+		// track name
+		div:nth-child(4) 
+		{
+			width: 38%;
+		}
+		//release date
+		div:nth-child(5) 
+		{
+			width: 10%;
+		}
+	}
+}
+
+#top-40
+{
+	.top-40-description
+	{
+		margin-bottom: 50px;
+		margin-top: 20px;
+	}
+}
+
+@media all and (max-width: 1170px)
+{
+	.top-40-container
+	{
+		div
+		{		
+			// position
+			div:nth-child(1) 
+			{
+				width: 5%;
+			}
+			// artwork
+			div:nth-child(2) 
+			{
+				width: 13%;
+			}
+			//artist(s)
+			div:nth-child(3) 
+			{
+				width: 35%;
+			}
+			// track name
+			div:nth-child(4) 
+			{
+				width: 35%;
+			}
+			//release date
+			div:nth-child(5) 
+			{
+				width: 12%;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 980px)
+{
+	.top-40-container
+	{
+		div
+		{		
+			// position
+			div:nth-child(1) 
+			{
+				width: 7%;
+			}
+			// artwork
+			div:nth-child(2) 
+			{
+				width: 15%;
+			}
+			//artist(s)
+			div:nth-child(3) 
+			{
+				width: 31%;
+			}
+			// track name
+			div:nth-child(4) 
+			{
+				width: 32%;
+			}
+			//release date
+			div:nth-child(5) 
+			{
+				width: 15%;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 768px)
+{
+	.top-40-container div .dn-tablet
+	{
+		display: none;
+	}
+
+	.top-40-container
+	{
+		img
+		{
+			width: 65px;
+		}
+
+		div
+		{
+			// position
+			div:nth-child(1) 
+			{
+				width: 7%;
+				padding-left: 10px;
+			}
+			// artwork
+			div:nth-child(2) 
+			{
+				width: 15%;
+			}
+			//artist(s)
+			div:nth-child(3) 
+			{
+				width: 39%;
+			}
+			// track name
+			div:nth-child(4) 
+			{
+				width: 39%;
+			}
+			//release date
+			div:nth-child(5) 
+			{
+				width: 0%;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 480px)
+{
+	.top-40-container
+	{
+		div
+		{
+			div
+			{
+				padding-left: 10px;
+			}
+
+			div:nth-child(1) 
+			{
+				width: 8%;
+				padding-left: 5px;
+			}
+			div:nth-child(2) 
+			{
+				width: 46%;
+			}
+			div:nth-child(3) 
+			{
+				width: 46%;
+			}
+		}
+	}
+}

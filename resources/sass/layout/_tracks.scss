@@ -1,0 +1,72 @@
+@import 'releases_top40';
+@import 'releases_artist';
+@import 'favorites_tracks';
+
+.top-40-container, .artist-releases-container, .favorites-container
+{
+	&>div:nth-child(even)
+	{
+		background-color: $light-gray;
+	}
+
+	div
+	{
+		display: flex;
+		align-items: center;
+
+		div
+		{
+			padding-left: 15px;
+		}
+	}
+
+	.top-40-titles, .artist-releases-titles, .favorites-titles
+	{
+		padding-bottom: 20px;
+		border-bottom: 1px solid $black;
+		margin-bottom: 30px;
+		font-weight: 700;
+	}
+
+	.top-40-track, .artist-releases-track, .favorite-track
+	{
+		padding-bottom: 7px;
+		padding-top: 7px;
+	}
+
+	img
+	{
+		width: 75px;
+	}
+}
+
+
+
+
+@media all and (max-width: 1170px)
+{
+
+}
+
+@media all and (max-width: 980px)
+{
+
+}
+
+@media all and (max-width: 768px)
+{
+
+}
+
+@media all and (max-width: 480px)
+{
+	.top-40-container div .dn-phone, .artist-releases-container div .dn-phone
+	{
+		display: none;
+	}
+}
+
+@media all and (max-width: 320px)
+{
+
+}

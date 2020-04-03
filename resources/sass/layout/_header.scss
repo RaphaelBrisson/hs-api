@@ -1,0 +1,133 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header
+{
+	padding-top: 25px;
+	margin-bottom: 75px;
+	position: relative;
+
+	ul
+	{
+		display: flex;
+
+		li:first-of-type
+		{
+			margin: auto;
+
+			a
+			{
+				img
+				{
+					width: 400px;
+				    position: absolute;
+				    left: 0;
+				    right: 0;
+				    margin: auto;
+				}
+			}
+		}
+		li:last-of-type
+		{
+			margin: auto;
+
+			a
+			{
+			    position: absolute;
+			    right: 0;
+			    margin: auto;
+
+			    border: 1px solid $black;
+    			padding: 7px 7px 6px 7px;
+			}
+		}
+	}
+}
+
+
+@media all and (max-width: 1170px)
+{
+
+}
+
+@media all and (max-width: 980px)
+{
+
+}
+
+@media all and (max-width: 768px)
+{
+	header
+	{
+		ul
+		{
+			li:first-of-type
+			{
+				a
+				{
+					img
+					{
+						width: 300px;
+					    right: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 480px)
+{
+	header
+	{
+		margin-bottom: 300px;
+
+		ul
+		{
+			li:first-of-type
+			{
+				a
+				{
+					img
+					{
+						width: 260px;
+					    right: 0;
+					}
+				}
+			}
+			li:last-of-type
+			{
+				margin: auto;
+
+				a
+				{
+				    left: 0;
+				    top: 120px;
+				    text-align: center;
+					width: 100px;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 320px)
+{
+	header
+	{
+		ul
+		{
+			li:first-of-type
+			{
+				a
+				{
+					img
+					{
+						width: 200px;
+					}
+				}
+			}
+		}
+	}
+}

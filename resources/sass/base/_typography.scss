@@ -1,0 +1,104 @@
+*
+{
+	font-family: 'Overpass'!important;
+	color: $black;
+}
+
+h1
+{
+	text-align: center;
+	font-weight: 600;
+	font-size: 35px;
+	letter-spacing: 2.25px;
+}
+
+h2
+{
+	font-weight: 900;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+strong
+{
+	font-weight: 700;
+}
+
+
+
+
+
+// .artist:hover
+// {
+// 	border-bottom: 2px solid black;
+// }
+
+.artist{
+    display: inline-block;
+    color: $black;
+    overflow: hidden;
+
+    &:after {
+	    content: '';
+	    display: block;
+	    width: 0%;
+	    height: 2px;
+	    background: $black;
+	    margin-left: 0px;
+	}
+
+	&:hover:after {
+	    width: 100%;
+	    animation: bb-anim 1s infinite ease-in-out both;
+	}
+}
+
+@keyframes bb-anim {
+  0% {
+      width: 0%;
+      margin-left: 0px;
+  }
+  50% {
+        margin-left: 0px;
+  }
+  100% {
+      width: 100%;
+      margin-left: 100%;
+  }
+}
+
+
+
+
+@media all and (max-width: 1170px)
+{
+
+}
+
+@media all and (max-width: 980px)
+{
+	h2
+	{
+		font-size: 35px;
+	}
+}
+
+@media all and (max-width: 768px)
+{
+
+}
+
+@media all and (max-width: 480px)
+{
+	h2
+	{
+		font-size: 30px;
+	}
+}
+@media all and (max-width: 320px)
+{
+	h2
+	{
+		font-size: 25px;
+	}
+}
