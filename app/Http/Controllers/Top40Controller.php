@@ -38,25 +38,21 @@ class Top40Controller extends Controller
 		} 
 		else {
 			
-
 			// Pour convertir le tableau JSON en object PHP
 			$playlist = json_decode($response);
-			//dd($playlist);
-
 
 			// Le titre de la playlist (le h2)
 			$playlist_title = $playlist->title;
 			// Les 40 tracks
 			$playlist_tracks = $playlist->tracks->data;
 
-			// Tableaux qui vont récupérer les différentes valeurs dont j'ai besoin
-			$a = array();
+			// Tableaux qui vont récupérer les différentes valeurs dont j'ai besoin de chaque musique de la playlist
 			$track_title = array();
 			$release_date = array();
 			$artwork = array();
 			$artists_table = array();
 			$artists_id_table = array();
-			$azerty = array();
+			$all_artists = array();
 
 			// Pour chaque track
 			foreach ($playlist_tracks as $key => $playlist_track) {
@@ -93,8 +89,6 @@ class Top40Controller extends Controller
 					$track_data = json_decode($response2);
 					
 					// On remplie les tableaux
-					//// Pour voir toutes les infos dispo
-					////array_push($a, $track_data);
 					//// Titre
 					array_push($track_title, $track_data->title);
 					//// Date de sortie
@@ -117,17 +111,11 @@ class Top40Controller extends Controller
 					array_push($artists_id_table, $artists_id);
 
 					// Pour pouvoir ajouter tous les artistes dans l'input hidden dédié aux artistes (afin d'ajouter une track à ses favoris)
-					array_push($azerty, implode(" - ", $artists_table[$key]));
-
-
+					array_push($all_artists, implode(" - ", $artists_table[$key]));
 				}
 			}
-			//dd($artists_table);
-
-			//$azerty = implode(" - ", $artists_table[$key]);
-			//dd($azerty);	
 		}
 
-		return view('welcome', compact("playlist_title", "playlist_tracks", "track_data", "track_title", "release_date", "artwork", "artists_table", "artists_id_table", "azerty"));
+		return view('welcome', compact("playlist_title", "playlist_tracks", "track_data", "track_title", "release_date", "artwork", "artists_table", "artists_id_table", "all_artists"));
     }
 }

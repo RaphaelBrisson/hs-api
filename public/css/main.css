@@ -1,15 +1,3 @@
-/*@function asset($base, $type, $path) {
-  @return url($base + $type + $path);
-}*/
-
-/*@function image($path, $base: $base-url) {
-  @return asset($base, 'images/', $path);
-}*/
-
-/*@function font($path, $base: $base-url) {
-  @return asset($base, 'fonts/', $path);
-}*/
-
 /*'abstracts/mixins';*/
 
 html,
@@ -235,13 +223,13 @@ strong {
 
 @media all and (max-width: 480px) {
   h2 {
-    font-size: 30px;
+    font-size: 34px;
   }
 }
 
 @media all and (max-width: 320px) {
   h2 {
-    font-size: 25px;
+    font-size: 28px;
   }
 }
 
@@ -340,10 +328,6 @@ header ul li:last-of-type a:hover {
 }
 
 @media all and (max-width: 480px) {
-  header {
-    margin-bottom: 300px;
-  }
-
   header ul li:first-of-type a img {
     width: 260px;
     right: 0;
@@ -364,245 +348,6 @@ header ul li:last-of-type a:hover {
 @media all and (max-width: 320px) {
   header ul li:first-of-type a img {
     width: 200px;
-  }
-}
-
-.top-40-container div div:nth-child(1) {
-  width: 5%;
-}
-
-.top-40-container div div:nth-child(2) {
-  width: 10%;
-}
-
-.top-40-container div div:nth-child(3) {
-  width: 37%;
-  flex-flow: wrap;
-}
-
-.top-40-container div div:nth-child(3) > p:last-of-type {
-  display: none;
-}
-
-.top-40-container div div:nth-child(4) {
-  width: 38%;
-}
-
-.top-40-container div div:nth-child(5) {
-  width: 10%;
-}
-
-#top-40 .top-40-description {
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
-
-@media all and (max-width: 1170px) {
-  .top-40-container div div:nth-child(1) {
-    width: 5%;
-  }
-
-  .top-40-container div div:nth-child(2) {
-    width: 13%;
-  }
-
-  .top-40-container div div:nth-child(3) {
-    width: 35%;
-  }
-
-  .top-40-container div div:nth-child(4) {
-    width: 35%;
-  }
-
-  .top-40-container div div:nth-child(5) {
-    width: 12%;
-  }
-}
-
-@media all and (max-width: 980px) {
-  .top-40-container div div:nth-child(1) {
-    width: 7%;
-  }
-
-  .top-40-container div div:nth-child(2) {
-    width: 15%;
-  }
-
-  .top-40-container div div:nth-child(3) {
-    width: 31%;
-  }
-
-  .top-40-container div div:nth-child(4) {
-    width: 32%;
-  }
-
-  .top-40-container div div:nth-child(5) {
-    width: 15%;
-  }
-}
-
-@media all and (max-width: 768px) {
-  .top-40-container div .dn-tablet {
-    display: none;
-  }
-
-  .top-40-container img {
-    width: 65px;
-  }
-
-  .top-40-container div div:nth-child(1) {
-    width: 7%;
-    padding-left: 10px;
-  }
-
-  .top-40-container div div:nth-child(2) {
-    width: 15%;
-  }
-
-  .top-40-container div div:nth-child(3) {
-    width: 39%;
-  }
-
-  .top-40-container div div:nth-child(4) {
-    width: 39%;
-  }
-
-  .top-40-container div div:nth-child(5) {
-    width: 0%;
-  }
-}
-
-@media all and (max-width: 480px) {
-  .top-40-container div div {
-    padding-left: 10px;
-  }
-
-  .top-40-container div div:nth-child(1) {
-    width: 8%;
-    padding-left: 5px;
-  }
-
-  .top-40-container div div:nth-child(2) {
-    width: 46%;
-  }
-
-  .top-40-container div div:nth-child(3) {
-    width: 46%;
-  }
-}
-
-.artist-releases-container div div:nth-child(1) {
-  width: 10%;
-}
-
-.artist-releases-container div div:nth-child(2) {
-  width: 45%;
-  flex-flow: wrap;
-}
-
-.artist-releases-container div div:nth-child(2) > p:last-of-type {
-  display: none;
-}
-
-.artist-releases-container div div:nth-child(3) {
-  width: 45%;
-}
-
-#artist-releases h2 {
-  margin-bottom: 50px;
-}
-
-@media all and (max-width: 768px) {
-  .artist-releases-container div div:nth-child(1) {
-    width: 20%;
-  }
-
-  .artist-releases-container div div:nth-child(2) {
-    width: 40%;
-    flex-flow: wrap;
-  }
-
-  .artist-releases-container div div:nth-child(2) > p:last-of-type {
-    display: none;
-  }
-
-  .artist-releases-container div div:nth-child(3) {
-    width: 40%;
-  }
-}
-
-@media all and (max-width: 480px) {
-  .artist-releases-container div div:nth-child(1) {
-    width: 0%;
-  }
-
-  .artist-releases-container div div:nth-child(2) {
-    width: 50%;
-    flex-flow: wrap;
-  }
-
-  .artist-releases-container div div:nth-child(2) > p:last-of-type {
-    display: none;
-  }
-
-  .artist-releases-container div div:nth-child(3) {
-    width: 50%;
-  }
-}
-
-.favorites-container div div:nth-child(1) {
-  width: 50%;
-  flex-flow: wrap;
-}
-
-.favorites-container div div:nth-child(2) {
-  width: 50%;
-}
-
-#list-favorites .favorites-container .favorite-track {
-  padding-bottom: 18px;
-  padding-top: 18px;
-}
-
-#artist-releases h2 {
-  margin-bottom: 50px;
-}
-
-@media all and (max-width: 768px) {
-  .artist-releases-container div div:nth-child(1) {
-    width: 20%;
-  }
-
-  .artist-releases-container div div:nth-child(2) {
-    width: 40%;
-    flex-flow: wrap;
-  }
-
-  .artist-releases-container div div:nth-child(2) > p:last-of-type {
-    display: none;
-  }
-
-  .artist-releases-container div div:nth-child(3) {
-    width: 40%;
-  }
-}
-
-@media all and (max-width: 480px) {
-  .artist-releases-container div div:nth-child(1) {
-    width: 0%;
-  }
-
-  .artist-releases-container div div:nth-child(2) {
-    width: 50%;
-    flex-flow: wrap;
-  }
-
-  .artist-releases-container div div:nth-child(2) > p:last-of-type {
-    display: none;
-  }
-
-  .artist-releases-container div div:nth-child(3) {
-    width: 50%;
   }
 }
 
@@ -666,6 +411,279 @@ header ul li:last-of-type a:hover {
   }
 }
 
+.top-40-container div div {
+  padding-left: 15px;
+}
+
+.top-40-container div div:nth-child(1) {
+  width: 3%;
+}
+
+.top-40-container div div:nth-child(2) {
+  width: 10%;
+}
+
+.top-40-container div div:nth-child(3) {
+  width: 33%;
+  flex-flow: wrap;
+}
+
+.top-40-container div div:nth-child(3) > p:last-of-type {
+  display: none;
+}
+
+.top-40-container div div:nth-child(4) {
+  width: 32%;
+}
+
+.top-40-container div div:nth-child(5) {
+  width: 12%;
+}
+
+.top-40-container div div:nth-child(6) {
+  width: 10%;
+}
+
+.top-40-container div div:nth-child(6) form {
+  width: 80%;
+}
+
+.top-40-container div button {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 13px;
+  padding-top: 2px;
+}
+
+#top-40 .top-40-description {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+@media all and (max-width: 1170px) {
+  .top-40-container div div:nth-child(1) {
+    width: 3%;
+  }
+
+  .top-40-container div div:nth-child(2) {
+    width: 12%;
+  }
+
+  .top-40-container div div:nth-child(3) {
+    width: 31%;
+  }
+
+  .top-40-container div div:nth-child(4) {
+    width: 31%;
+  }
+
+  .top-40-container div div:nth-child(5) {
+    width: 12%;
+  }
+
+  .top-40-container div div:nth-child(6) {
+    width: 11%;
+  }
+}
+
+@media all and (max-width: 980px) {
+  .top-40-container div div:nth-child(1) {
+    width: 3%;
+  }
+
+  .top-40-container div div:nth-child(2) {
+    width: 14%;
+  }
+
+  .top-40-container div div:nth-child(3) {
+    width: 29%;
+  }
+
+  .top-40-container div div:nth-child(4) {
+    width: 30%;
+  }
+
+  .top-40-container div div:nth-child(5) {
+    width: 16%;
+  }
+
+  .top-40-container div div:nth-child(6) {
+    width: 12%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .top-40-container div .dn-tablet {
+    display: none;
+  }
+
+  .top-40-container img {
+    width: 60px;
+  }
+
+  .top-40-container div div {
+    padding-left: 10px;
+  }
+
+  .top-40-container div div:nth-child(1) {
+    width: 8%;
+    padding-left: 5px;
+  }
+
+  .top-40-container div div:nth-child(2) {
+    width: 17%;
+  }
+
+  .top-40-container div div:nth-child(3) {
+    width: 32%;
+  }
+
+  .top-40-container div div:nth-child(4) {
+    width: 32%;
+  }
+
+  .top-40-container div div:nth-child(5) {
+    width: 0%;
+  }
+
+  .top-40-container div div:nth-child(6) {
+    width: 15%;
+  }
+
+  .top-40-container div button {
+    padding-left: 1px;
+    padding-right: 1px;
+    font-size: 12px;
+    padding-top: 2px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .top-40-container div div:nth-child(1) {
+    width: 8%;
+    padding-left: 5px;
+  }
+
+  .top-40-container div div:nth-child(2) {
+    width: 36%;
+  }
+
+  .top-40-container div div:nth-child(3) {
+    width: 36%;
+  }
+
+  .top-40-container div div:nth-child(6) {
+    width: 20%;
+  }
+}
+
+.artist-releases-container div div:nth-child(1) {
+  width: 10%;
+}
+
+.artist-releases-container div div:nth-child(2) {
+  width: 45%;
+  flex-flow: wrap;
+}
+
+.artist-releases-container div div:nth-child(2) > p:last-of-type {
+  display: none;
+}
+
+.artist-releases-container div div:nth-child(3) {
+  width: 45%;
+}
+
+#artist-releases h2 {
+  margin-bottom: 50px;
+}
+
+@media all and (max-width: 768px) {
+  .artist-releases-container div div:nth-child(1) {
+    width: 20%;
+  }
+
+  .artist-releases-container div div:nth-child(2) {
+    width: 40%;
+    flex-flow: wrap;
+  }
+
+  .artist-releases-container div div:nth-child(3) {
+    width: 40%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .artist-releases-container div div:nth-child(1) {
+    width: 0%;
+  }
+
+  .artist-releases-container div div:nth-child(2) {
+    width: 50%;
+    flex-flow: wrap;
+  }
+
+  .artist-releases-container div div:nth-child(3) {
+    width: 50%;
+  }
+}
+
+.favorites-container div div:nth-child(1) {
+  width: 50%;
+  flex-flow: wrap;
+}
+
+.favorites-container div div:nth-child(2) {
+  width: 50%;
+}
+
+#list-favorites .favorites-container .favorite-track {
+  padding-bottom: 18px;
+  padding-top: 18px;
+}
+
+#artist-releases h2 {
+  margin-bottom: 50px;
+}
+
+@media all and (max-width: 768px) {
+  .artist-releases-container div div:nth-child(1) {
+    width: 20%;
+  }
+
+  .artist-releases-container div div:nth-child(2) {
+    width: 40%;
+    flex-flow: wrap;
+  }
+
+  .artist-releases-container div div:nth-child(2) > p:last-of-type {
+    display: none;
+  }
+
+  .artist-releases-container div div:nth-child(3) {
+    width: 40%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .artist-releases-container div div:nth-child(1) {
+    width: 0%;
+  }
+
+  .artist-releases-container div div:nth-child(2) {
+    width: 50%;
+    flex-flow: wrap;
+  }
+
+  .artist-releases-container div div:nth-child(2) > p:last-of-type {
+    display: none;
+  }
+
+  .artist-releases-container div div:nth-child(3) {
+    width: 50%;
+  }
+}
+
 footer {
   padding-top: 100px;
   padding-bottom: 20px;
@@ -676,19 +694,21 @@ footer p {
   text-align: center;
 }
 
-.see-more {
-  display: flex;
+button {
+  background: #fafafa;
+  background-image: linear-gradient(to top, black 0%, black 100%);
+  background-position: center top;
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, color 0.3s ease-in;
+  cursor: pointer;
+  border: 1px solid #000000;
+  font-size: 12pt;
 }
 
-.see-more button {
-  border: none;
-  background: none;
-  padding: 0;
-  font-weight: 900;
-  font-size: 22px;
-  outline: none;
-  cursor: pointer;
-  margin: auto;
+button:hover {
+  color: #ffffff;
+  background-size: 100% 100%;
 }
 
 #baseline {
@@ -697,6 +717,12 @@ footer p {
 
 #top-40 {
   margin-top: 200px;
+}
+
+@media all and (max-width: 480px) {
+  #baseline {
+    margin-top: 280px;
+  }
 }
 
 #artist-data {
@@ -719,63 +745,79 @@ footer p {
   width: 100%;
 }
 
-#favorites-page #add-new-favorite {
+@media all and (max-width: 480px) {
+  #artist-data {
+    padding-top: 100px;
+  }
+}
+
+#favorites-page #add-new-favorite,
+#favorites-page #edit-favorite {
   padding-top: 100px;
 }
 
-#favorites-page #add-new-favorite form {
+#favorites-page #add-new-favorite form,
+#favorites-page #edit-favorite form {
   padding-top: 30px;
   padding-bottom: 80px;
 }
 
-#favorites-page #add-new-favorite form * {
+#favorites-page #add-new-favorite form *,
+#favorites-page #edit-favorite form * {
   outline: none;
   background: #fafafa;
   border: 1px solid #000000;
   font-size: 12pt;
-  padding-top: 6px;
+  padding-top: 8px;
   padding-bottom: 4px;
   padding-left: 10px;
   padding-right: 80px;
   margin-right: 5px;
 }
 
-#favorites-page #add-new-favorite form *::-webkit-input-placeholder {
+#favorites-page #add-new-favorite form *::-webkit-input-placeholder, #favorites-page #edit-favorite form *::-webkit-input-placeholder {
   color: #000000;
 }
 
-#favorites-page #add-new-favorite form *::-moz-placeholder {
+#favorites-page #add-new-favorite form *::-moz-placeholder, #favorites-page #edit-favorite form *::-moz-placeholder {
   color: #000000;
 }
 
-#favorites-page #add-new-favorite form *:-ms-input-placeholder {
+#favorites-page #add-new-favorite form *:-ms-input-placeholder, #favorites-page #edit-favorite form *:-ms-input-placeholder {
   color: #000000;
 }
 
-#favorites-page #add-new-favorite form *::-ms-input-placeholder {
+#favorites-page #add-new-favorite form *::-ms-input-placeholder, #favorites-page #edit-favorite form *::-ms-input-placeholder {
   color: #000000;
 }
 
-#favorites-page #add-new-favorite form *::placeholder {
+#favorites-page #add-new-favorite form *::placeholder,
+#favorites-page #edit-favorite form *::placeholder {
   color: #000000;
 }
 
-#favorites-page #add-new-favorite form input[type=text]:focus {
+#favorites-page #add-new-favorite form input[type=text]:focus,
+#favorites-page #edit-favorite form input[type=text]:focus {
   background: #ffffff;
 }
 
-#favorites-page #add-new-favorite form button {
+#favorites-page #add-new-favorite form button,
+#favorites-page #edit-favorite form button {
   padding-right: 13px;
   font-weight: 600;
+  background: #fafafa;
   background-image: linear-gradient(to top, black 0%, black 100%);
   background-position: center top;
   background-size: 100% 0%;
   background-repeat: no-repeat;
   transition: background-size 0.3s, color 0.3s ease-in;
   cursor: pointer;
+  border: 1px solid #000000;
+  font-size: 12pt;
 }
 
-#favorites-page #add-new-favorite form button:hover {
+#favorites-page #add-new-favorite form button:hover,
+#favorites-page #edit-favorite form button:hover {
   color: #ffffff;
   background-size: 100% 100%;
 }
@@ -785,25 +827,48 @@ footer p {
   padding-top: 50px;
 }
 
-#favorites-added-page section {
-  padding-top: 50px;
+#favorites-added-page section,
+#favorites-deleted-page section,
+#favorites-edited-page section {
+  padding-top: 150px;
   padding-bottom: 100px;
 }
 
-#favorites-added-page section h2 {
-  padding-bottom: 50px;
+#favorites-added-page section h2,
+#favorites-deleted-page section h2,
+#favorites-edited-page section h2 {
+  padding-bottom: 150px;
 }
 
-#favorites-added-page section p {
+#favorites-added-page section p,
+#favorites-deleted-page section p,
+#favorites-edited-page section p {
   font-size: 14pt;
   border: 1px solid #000000;
   padding: 7px 7px 6px 7px;
-  width: 70%;
+  width: 30%;
   text-align: center;
   margin: auto;
+  background: #fafafa;
+  background-image: linear-gradient(to left, black 0%, black 100%);
+  background-position: left top;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, color 0.3s ease-in;
+}
+
+#favorites-added-page section p:hover,
+#favorites-deleted-page section p:hover,
+#favorites-edited-page section p:hover {
+  color: #ffffff;
+  background-size: 100% 100%;
 }
 
 @media all and (max-width: 768px) {
+  #favorites-added-page section p {
+    width: 40%;
+  }
+
   #favorites-page #add-new-favorite form {
     display: flex;
     flex-direction: column;

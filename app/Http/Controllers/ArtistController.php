@@ -38,14 +38,12 @@ class ArtistController extends Controller
 		} 
 		else {
 			$artist = json_decode($response);
-			//dd($artist);
 
 			$artist_name = $artist->name;
 			$artist_picture = $artist->picture_medium;
 			// // substr pour limiter le nombre de tracks à 5 (50 dans la requête de base)
 			// $artist_tracklist = substr($artist->tracklist, 0, -1);
 			$artist_tracklist = $artist->tracklist;
-			//dd($artist_tracklist);
 
 			$curl = curl_init();
 
@@ -76,7 +74,6 @@ class ArtistController extends Controller
 			else {
 				$tracklist = json_decode($response2);
 				$tracklist_tracks = $tracklist->data;
-				//dd($tracklist_tracks);
 
 				$track_title = array();
 				$artwork = array();
@@ -107,7 +104,6 @@ class ArtistController extends Controller
 			}
 		}
 
-		/*return view('artist', ['response' => json_decode($response)]);*/
 		return view('artist', compact("artist_name", "tracklist_tracks", "artist_picture", "track_title", "artwork", "artists_table", "artists_id_table"));
     }
 }

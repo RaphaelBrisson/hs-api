@@ -3,19 +3,21 @@
 // -----------------------------------------------------------------------------
 
 
-.see-more
+button
 {
-	display: flex;
+	background: $light-gray;
+	background-image: linear-gradient(to top, black 0%, black 100%);;
+	background-position: center top; 
+	background-size: 100% 0%;
+	background-repeat:no-repeat;
+	transition: background-size .3s, color .3s ease-in;
+	cursor: pointer;
+	border: 1px solid $black;
+	font-size: 12pt;
 
-	button
+	&:hover
 	{
-		border: none;
-		background: none;
-		padding: 0;
-		font-weight: 900;
-		font-size: 22px;
-		outline: none;
-		cursor: pointer;
-		margin: auto;
+		color: $white;
+		background-size: 100% 100%;
 	}
 }

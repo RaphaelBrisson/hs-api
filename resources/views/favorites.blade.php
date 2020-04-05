@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <title>Hardstyle-Releases</title>
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900&display=swap" rel="stylesheet">
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-        <!-- Favicon -->
-        <link rel="icon" href="{{ asset('img/favicon.png') }}" />
+        <title>Hardstyle-Releases | Favorites</title>
+
+        @include('common-sections/head')
+        
     </head>
     <body id="favorites-page" class="wrap">
 
@@ -26,6 +20,7 @@
                 <button>Add</button>
             </form>
         </section>
+
         <section id="list-favorites">
             <h2>All your favorites music</h2>
             <div class="favorites-container">
@@ -45,6 +40,16 @@
                         <div>
                             <p>{{$favorite->track_name}}</p>
                         </div>
+                        <form action="{{route('favorites-delete')}}" method="get">
+                            @csrf
+                            <input type="hidden" name="track_id" value="{{$favorite->id}}">
+                            <button>Delete</button>
+                        </form>
+                        <form action="{{route('favorites-edit')}}" method="get">
+                            
+                            <input type="hidden" name="track_id" value="{{$favorite->id}}">
+                            <button>Edit</button>
+                        </form>
                     </div>
                 @endforeach
             </div>

@@ -52,12 +52,6 @@
 			{
 				width: 40%;
 				flex-flow: wrap;
-
-				// enlèves le " -" sur le dernier artiste
-				&>p:last-of-type
-				{
-					display: none;
-				}
 			}
 			// track name
 			div:nth-child(3) 
@@ -84,12 +78,6 @@
 			{
 				width: 50%;
 				flex-flow: wrap;
-
-				// enlèves le " -" sur le dernier artiste
-				&>p:last-of-type
-				{
-					display: none;
-				}
 			}
 			// track name
 			div:nth-child(3) 

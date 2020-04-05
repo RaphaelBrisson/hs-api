@@ -1,6 +1,4 @@
-@import 'releases_top40';
-@import 'releases_artist';
-@import 'favorites_tracks';
+// IMPORTS IN THE BOTTOM
 
 .top-40-container, .artist-releases-container, .favorites-container
 {
@@ -70,3 +68,11 @@
 {
 
 }
+
+
+
+
+
+@import 'releases_top40';
+@import 'releases_artist';
+@import 'favorites_tracks';

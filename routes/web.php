@@ -11,27 +11,16 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+
+// Home page
 Route::get('/', 'Top40Controller@index');
 
-//id récupéré grâce aux a href
+// Page d'un artiste dont l'id est récupéré grâce aux a href
 Route::get('/artist/{id}', 'ArtistController@index');
 
-
-// Route::get('/artist.blade.php', function () {
-//     return view('artist');
-// });
-
-
-Route::get('/refuzion', 'ArtistController@index');
-
-
-// Route::get('/artist/{$artist}', function ($country) {
-// 	echo("L'artiste est " . $country);
-// })->where('artist', '[A-Za-z]+');
-
-
+// Page des favoris (avec les fonctions et autres pages liées)
 Route::get('/favorites', 'FavoritesController@index')->name('favorites');
 Route::post('/favorites-insert', 'FavoritesController@insert')->name('favorites-insert');
+Route::get('/favorites-delete', 'FavoritesController@delete')->name('favorites-delete');
+Route::get('/favorites-edit', 'FavoritesController@edit')->name('favorites-edit');
+Route::get('/favorites-update', 'FavoritesController@update')->name('favorites-update');

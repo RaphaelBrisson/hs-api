@@ -2,10 +2,14 @@
 {
 	div
 	{
+		div
+		{
+			padding-left: 15px;
+		}
 		// position
 		div:nth-child(1) 
 		{
-			width: 5%;
+			width: 3%;
 		}
 		// artwork
 		div:nth-child(2) 
@@ -15,7 +19,7 @@
 		// artist(s)
 		div:nth-child(3) 
 		{
-			width: 37%;
+			width: 33%;
 			flex-flow: wrap;
 			
 			// enlèves le " -" sur le dernier artiste
@@ -27,12 +31,30 @@
 		// track name
 		div:nth-child(4) 
 		{
-			width: 38%;
+			width: 32%;
 		}
 		//release date
 		div:nth-child(5) 
 		{
+			width: 12%;
+		}
+		//button
+		div:nth-child(6) 
+		{
 			width: 10%;
+
+			form
+			{
+				width: 80%;
+			}
+		}
+
+		button
+		{
+			padding-left: 5px;
+			padding-right: 5px;
+			font-size: 13px;
+			padding-top: 2px;
 		}
 	}
 }
@@ -55,27 +77,32 @@
 			// position
 			div:nth-child(1) 
 			{
-				width: 5%;
+				width: 3%;
 			}
 			// artwork
 			div:nth-child(2) 
 			{
-				width: 13%;
+				width: 12%;
 			}
 			//artist(s)
 			div:nth-child(3) 
 			{
-				width: 35%;
+				width: 31%;
 			}
 			// track name
 			div:nth-child(4) 
 			{
-				width: 35%;
+				width: 31%;
 			}
 			//release date
 			div:nth-child(5) 
 			{
 				width: 12%;
+			}
+			//button
+			div:nth-child(6) 
+			{
+				width: 11%;
 			}
 		}
 	}
@@ -90,27 +117,32 @@
 			// position
 			div:nth-child(1) 
 			{
-				width: 7%;
+				width: 3%;
 			}
 			// artwork
 			div:nth-child(2) 
 			{
-				width: 15%;
+				width: 14%;
 			}
 			//artist(s)
 			div:nth-child(3) 
 			{
-				width: 31%;
+				width: 29%;
 			}
 			// track name
 			div:nth-child(4) 
 			{
-				width: 32%;
+				width: 30%;
 			}
 			//release date
 			div:nth-child(5) 
 			{
-				width: 15%;
+				width: 16%;
+			}
+			//button
+			div:nth-child(6) 
+			{
+				width: 12%;
 			}
 		}
 	}
@@ -127,36 +159,54 @@
 	{
 		img
 		{
-			width: 65px;
+			width: 60px;
 		}
 
 		div
 		{
+			div
+			{
+				padding-left: 10px;
+			}
+
 			// position
 			div:nth-child(1) 
 			{
-				width: 7%;
-				padding-left: 10px;
+				width: 8%;
+				padding-left: 5px;
 			}
 			// artwork
 			div:nth-child(2) 
 			{
-				width: 15%;
+				width: 17%;
 			}
 			//artist(s)
 			div:nth-child(3) 
 			{
-				width: 39%;
+				width: 32%;
 			}
 			// track name
 			div:nth-child(4) 
 			{
-				width: 39%;
+				width: 32%;
 			}
 			//release date
 			div:nth-child(5) 
 			{
 				width: 0%;
+			}
+			//button
+			div:nth-child(6) 
+			{
+				width: 15%;
+			}
+
+			button
+			{
+				padding-left: 1px;
+				padding-right: 1px;
+				font-size: 12px;
+				padding-top: 2px;
 			}
 		}
 	}
@@ -168,10 +218,6 @@
 	{
 		div
 		{
-			div
-			{
-				padding-left: 10px;
-			}
 
 			div:nth-child(1) 
 			{
@@ -180,11 +226,15 @@
 			}
 			div:nth-child(2) 
 			{
-				width: 46%;
+				width: 36%;
 			}
 			div:nth-child(3) 
 			{
-				width: 46%;
+				width: 36%;
+			}
+			div:nth-child(6) 
+			{
+				width: 20%;
 			}
 		}
 	}

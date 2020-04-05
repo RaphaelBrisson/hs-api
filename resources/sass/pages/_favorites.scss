@@ -1,7 +1,7 @@
 #favorites-page 
 {
 
-	#add-new-favorite
+	#add-new-favorite, #edit-favorite
 	{
 		padding-top: 100px;
 
@@ -17,7 +17,7 @@
 				background: $light-gray;
 				border: 1px solid $black;
 				font-size: 12pt;
-				padding-top: 6px;
+				padding-top: 8px;
 				padding-bottom: 4px;
 				padding-left: 10px;
 				padding-right: 80px;
@@ -38,12 +38,15 @@
 			{
 				padding-right: 13px;
 				font-weight: 600;
+				background: $light-gray;
 				background-image: linear-gradient(to top, black 0%, black 100%);;
 				background-position: center top; 
 				background-size: 100% 0%;
 				background-repeat:no-repeat;
 				transition: background-size .3s, color .3s ease-in;
 				cursor: pointer;
+				border: 1px solid $black;
+				font-size: 12pt;
 
 				&:hover
 				{
@@ -51,9 +54,6 @@
 					background-size: 100% 100%;
 				}
 			}
-
-
-			
 		}
 	}
 
@@ -65,16 +65,16 @@
 }
 
 
-#favorites-added-page
+#favorites-added-page, #favorites-deleted-page, #favorites-edited-page
 {
 	section
 	{
-		padding-top: 50px;
+		padding-top: 150px;
 		padding-bottom: 100px;
 
 		h2
 		{
-			padding-bottom: 50px;
+			padding-bottom: 150px;
 		}
 
 		p
@@ -82,9 +82,21 @@
 			font-size: 14pt;
 			border: 1px solid $black;
 	    	padding: 7px 7px 6px 7px;
-	    	width: 70%;
+	    	width: 30%;
 	    	text-align: center;
 	    	margin: auto;
+	    	background: $light-gray;
+			background-image: linear-gradient(to left, black 0%, black 100%);;
+			background-position: left top; 
+			background-size: 0% 100%;
+			background-repeat:no-repeat;
+			transition: background-size .3s, color .3s ease-in;
+
+	    	&:hover
+			{
+				color: $white;
+				background-size: 100% 100%;
+			}
 		}
 	}
 }
@@ -94,6 +106,17 @@
 
 @media all and (max-width: 768px)
 {
+	#favorites-added-page
+	{
+		section
+		{
+			p
+			{
+		    	width: 40%;
+		    }
+		}
+	}
+
 	#favorites-page 
 	{
 

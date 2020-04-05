@@ -2,15 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <title>Hardstyle-Releases</title>
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900&display=swap" rel="stylesheet">
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-        <!-- Favicon -->
-        <link rel="icon" href="{{ asset('img/favicon.png') }}" />
+
+        @include('common-sections/head')
+        
     </head>
     <body id="home-page" class="wrap">
         
@@ -39,6 +33,9 @@
                     <div class="dn-tablet">
                         <h3>Release date</h3>
                     </div>
+                    <div>
+                        
+                    </div>
                 </div>
                 @foreach($playlist_tracks as $key => $playlist_track)
                     <div class="top-40-track">
@@ -62,13 +59,15 @@
                         <div class="dn-tablet">
                             <p>{{$release_date[$key]}}</p>
                         </div>
-                        <form action="{{route('favorites-insert')}}" method="post">
-                            <!-- @csrf pour protéger des attaques -->
-                            @csrf
-                            <input type="hidden" name="artists" value="{{$azerty[$key]}}">
-                            <input type="hidden" name="track_name" value="{{$track_title[$key]}}">
-                            <button>Add to favorites</button>
-                        </form>
+                        <div>
+                            <form action="{{route('favorites-insert')}}" method="post">
+                                <!-- csrf pour protéger des attaques -->
+                                @csrf
+                                <input type="hidden" name="artists" value="{{$all_artists[$key]}}">
+                                <input type="hidden" name="track_name" value="{{$track_title[$key]}}">
+                                <button>Add to favorites</button>
+                            </form>
+                        </div>  
                     </div>
                 @endforeach
 
@@ -76,8 +75,6 @@
         </section>
 
         @include('common-sections/footer')
-
-        <script src="/js/app.js"></script>
         
     </body>
 </html>
